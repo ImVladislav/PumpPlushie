@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   overflow-x: hidden;
 }
@@ -27,18 +28,25 @@ html, body {
   color: white;
   font-family: Arial, sans-serif;
   padding: 20px;
+  outline: 1px solid tomato;
 }
 
-.block h1, .block h2 {
+.block h1,
+.block h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .block p {
   font-size: 1.5rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
+}
+
+.block-4 {
+  position: relative;
+  padding: 0;
 }
 
 /* Додаткові стилі для більшої висоти */
@@ -57,11 +65,31 @@ html, body {
   will-change: width;
 }
 
-.toy-1 { top: 15%; left: 68%; width: 4%;}
-.toy-2 { top: 54%; left: 78%; width: 16.5%;}
-.toy-3 { top: 7%; left: 20%; width: 16%;}
-.toy-4 { top: 63%; left: 6%; width: 12%; }
-.toy-5 { top: 15%; left: 85%; width: 8.4%;}
+.toy-1 {
+  top: 15%;
+  left: 68%;
+  width: 4%;
+}
+.toy-2 {
+  top: 54%;
+  left: 78%;
+  width: 16.5%;
+}
+.toy-3 {
+  top: 7%;
+  left: 20%;
+  width: 16%;
+}
+.toy-4 {
+  top: 63%;
+  left: 6%;
+  width: 12%;
+}
+.toy-5 {
+  top: 15%;
+  left: 85%;
+  width: 8.4%;
+}
 
 /* Кастомний скрол */
 ::-webkit-scrollbar {
@@ -76,4 +104,166 @@ html, body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+/* Стилі для 1-го блоку */
+.scroll-button {
+  position: fixed;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%) scale(1) !important;
+  transition: transform 0.2s ease-out, top 0.2s ease-out;
+  z-index: 999;
+  display: inline-block;
+}
+
+.scroll-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 150px;
+}
+
+/* Стилі для 2-го блоку */
+.blocks {
+  position: relative;
+}
+.rainbow-1 {
+  position: absolute;
+  top: 0;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  background-image: url(image/rainbow_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* z-index: -1; */
+}
+
+.block-2 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.block-2-button-x {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+  width: fit-content;
+  max-width: 90%;
+  z-index: 2;
+}
+.block-2-button-telegram {
+  position: absolute;
+  bottom: 20%;
+  left: 70%;
+  transform: translateX(-50%);
+  width: fit-content;
+  max-width: 90%;
+  z-index: 2;
+}
+.button-img-drugs {
+  width: fit-content;
+  max-width: 50%;
+  height: auto;
+  /* max-width: 250px;
+  min-width: 60px; */
+  object-fit: contain;
+  position: absolute;
+  left: 10%;
+  /* transform: translateX(-50%); */
+  top: 50%;
+  z-index: 2;
+}
+
+/* Стилі для 3-го блоку */
+
+/* Стилі для 4-го блоку */
+.rainbow-2 {
+  position: relative;
+  top: 0;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  /* object-fit: contain; */
+  /* background-image: url(image/rainbow_2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /* z-index: -1; */
+}
+.block-4-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-image: url(image/block-4-footer.png);
+  background-size: cover;
+  background-position: center;
+}
+.block-4-buttons {
+  position: absolute;
+  bottom: 5em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: 90%;
+  z-index: 2;
+}
+
+.block-4-buttons a {
+  flex: 1 1 auto;
+}
+
+.button-img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  min-width: 60px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .button-img {
+    max-width: 100px;
+  }
+  .block-4-buttons {
+    bottom: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-img {
+    max-width: 70px;
+  }
+  .block-4-buttons {
+    bottom: 1em;
+  }
+}
+@media (min-width: 1128px) {
+  .block-4-buttons {
+    bottom: 10em;
+  }
+}
+@media (min-width: 1440px) {
+  .block-4-buttons {
+    bottom: 5em;
+  }
+}
+.tablets {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
 }
