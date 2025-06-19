@@ -13,22 +13,23 @@ html, body {
 
 .container {
     width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
+    /* height: 100vh; */
+    /* overflow-y: scroll; */
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-    position: fixed;
+    /* scroll-snap-type: y mandatory; */
+    /* position: fixed; */
     top: 0;
     left: 0;
     background-image: url(image/bg.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
 }
 
 .block {
     position: relative;
-    min-height: 400vh;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     display: flex;
