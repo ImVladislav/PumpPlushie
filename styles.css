@@ -13,12 +13,14 @@ html, body {
 
 .container {
     width: 100%;
-    height: auto;
-    overflow-y: auto;
+    height: 100vh;
+    overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
-    position: relative;
-    background-image: url(img/bg.png);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(image/bg.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -26,7 +28,7 @@ html, body {
 
 .block {
     position: relative;
-    min-height: 100vh;
+    min-height: 400vh;
     height: 100%;
     width: 100%;
     display: flex;
@@ -93,6 +95,41 @@ html, body {
 
 .block-4 {
     z-index: 1;
+}
+
+.toy {
+    position: fixed;
+    /* width: 200px; */
+    height: auto;
+    transition: transform 0.3s ease-out;
+    z-index: 20;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+.toy-1 {
+    top: 15%;
+    left: 10%;
+}
+
+.toy-2 {
+    top: 25%;
+    left: 30%;
+}
+
+.toy-3 {
+    top: 20%;
+    left: 50%;
+}
+
+.toy-4 {
+    top: 30%;
+    left: 70%;
+}
+
+.toy-5 {
+    top: 15%;
+    left: 85%;
 }
 
 /* Custom scrollbar */
