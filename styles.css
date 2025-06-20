@@ -232,6 +232,16 @@ body {
   min-width: 60px;
   object-fit: contain;
 }
+.faalenDrugsOne{
+      position: absolute;
+    width: 55%;
+    bottom: 0;
+}
+.faalenDrugs{
+      position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 
 @media (max-width: 768px) {
   .button-img {
